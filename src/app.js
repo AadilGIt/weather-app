@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const app =  experss();
 app.use(cors())
+const port = process.env.PORT || 3000
 
 
 const Dirpath = path.join(__dirname,'../public');
@@ -112,6 +113,6 @@ app.get('*',(req,res) =>{
 
 
 
-app.listen(3000,() =>{
-    console.log('server started');
+app.listen(port,() =>{
+    console.log('server started at ' + port);
 })

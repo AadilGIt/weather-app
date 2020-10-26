@@ -12,7 +12,7 @@ weather.addEventListener('submit',(e) =>{
     const location = search.value;
     //console.log(location);
 para.textContent = ('loading...')
-    fetch('http://localhost:3000/weather?address=' + location).then((response)=>{
+    fetch('/weather?address=' + location).then((response)=>{
         // console.log(response.json);
         Access-Control-Allow-Origin
         response.json().then((data) =>{
